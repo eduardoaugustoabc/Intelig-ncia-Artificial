@@ -1,0 +1,54 @@
+Laboratório 1 : Agentes inteligentes e busca heurística
+
+Nadson, o novo ferinha do curso, está com problemas para chegar no LCC 3, onde tem suas aulas. A faculdade está cheia de obras e todo dia ele precisa encontrar um novo caminho até o laboratório. Sua missão é simples, ajudar Nadson o ferinha a chegar até o LCC 3 desenvolvendo um algoritmo de busca heurística !
+
+Antes de começarmos primeiro precisamos definir os movimentos do nosso agente inteligente ! Isso mesmo, Nadson irá funcionar como um agente inteligente, então você precisa definir o array de movimentos dele.
+
+Dica: Pense no movimento do nosso agente como em um plano cartesiano, com nosso agente localizado no centro.
+
+ 
+O array de movimentos devem ser as coordenadas (x,y) saindo do ponto zero e realizando as ações de andar para frente (subir), virar a direita,  virar à esquerda e andar para trás (descer) nessa ordem
+
+Para ajudar Nadson a encontrar o menor caminho, você usará o algoritmo A* e a heurística da distância de Manhattan . Sua tarefa é encontrar o caminho mais curto entre um ponto inicial dado e um ponto de destino em um mapa de grade, evitando obstáculos.
+
+Você receberá um mapa de grade 5x5 representado por uma matriz. A matriz contém os seguintes valores:
+
+- 0: Uma célula vazia.
+- 1: Um obstáculo, que não pode ser atravessado.
+- 2: O ponto de partida onde Nadson o ferinha se encontra
+- 3: O ponto de destino que Nadson deseja alcançar
+
+Definição da matriz do mapa 10x10
+
+map = [
+    [0, 0, 0, 1, 0, 1, 1, 1, 0, 0],
+    [0, 1, 1, 0, 0, 0, 2, 1, 1, 0],
+    [0, 1, 1, 1, 1, 0, 1, 0, 0, 1],
+    [1, 1, 0, 1, 0, 0, 0, 0, 1, 1],
+    [1, 0, 1, 1, 1, 1, 1, 0, 0, 1],
+    [0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+    [0, 1, 1, 1, 0, 1, 0, 1, 0, 1],
+    [1, 0, 0, 0, 0, 1, 0, 0, 1, 0],
+    [0, 0, 1, 1, 0, 0, 0, 1, 1, 0],
+    [3, 1, 1, 1, 0, 1, 1, 1, 0, 0]
+    ]
+
+resultado esperado:
+
+[(1, 6),(1, 5),(2, 5),(3, 5),(3, 6),(3, 7),(4, 7),(5, 7),(5, 6),(6, 6),(7, 6),(8, 6),(8, 5),(8, 4),(7, 4),(7, 3),(7, 2),(7, 1),(8, 1),(8, 0),(9, 0)]
+
+Você precisará completar as seguintes funções e informações:
+
+find_start_end_points(map):Esta função encontra o ponto de partida e o ponto de destino no mapa. Lembre-se de que o caminho começa no valor 2 e termina no valor 3.
+
+manhattan_distance(point1, point2): Calcula a distância de Manhattan entre dois pontos.
+
+find_path(map, start, destination): Nesta função, você precisa implementar o cálculo da prioridade e além disso definir o array de movimentos do agente no formato [(x,y),(x,y),(x,y),(x,y)] . Além disso, você deverá adicionar a verificação de loops, para evitar que um nó já visitado seja visitado novamente.
+
+
+Dicas:
+Pesquise como é elaborada a fórmula da distância de manhattan
+O cálculo de prioridade é feito somando o tamanho do caminho com o resultado da sua métrica de distância
+Use um set() como forma de armazenar os nós já visitados.
+
+Link para o colab onde você desenvolverá sua resolução (realize uma cópia para poder salvar as edições) : LABIA-01.ipynb
