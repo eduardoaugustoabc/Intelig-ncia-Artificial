@@ -1,0 +1,25 @@
+Atividade Prática II - Algoritmo Genético
+
+É mais um dia comum e você está andando pela UFCG até que você encontra Ricardo, um treinador pokémon que tem um Bulbasauro . Ricardo está cansado de ouvir “bulbasaur”, “bulbasaur”, “bulbasaur” toda hora e deseja ensinar uma frase nova ao seu pokémon.
+
+
+Sabendo que você estuda computação, Ricardo pede que você crie um algoritmo genético para evoluir a linguagem do bulbasaur e ele ser capaz de dizer "Taylor Swift é a indústria musical". Pois Ricardo gosta muito dessa cantora.
+
+O que é um algoritmo genético?
+
+Um algoritmo genético é uma técnica de otimização inspirada na evolução biológica. Começando com uma população inicial de soluções aleatórias, cada indivíduo é avaliado de acordo com sua aptidão para o problema em questão. Os indivíduos mais aptos têm uma maior probabilidade de serem selecionados para reprodução, onde seus genes são combinados por meio de operadores como crossover e mutação, gerando descendentes que formam uma nova geração. Este processo de seleção, reprodução e variação genética é repetido iterativamente até que uma solução satisfatória seja encontrada ou até que um critério de parada seja atingido, permitindo que a população evolua e se adapte às demandas do problema ao longo do tempo.
+
+Implementando seu código
+
+Uma parte do código já está implementada e você precisa apenas terminar algumas funções do código.
+
+Faça alterações em calculate_fitness onde você deve implementar o cálculo do o quão boa a frase atual está.
+Em treina_pokemon você deve:
+gerar sua população preenchendo a lista population como indicado no código
+calcular o fitness da sua população e preencher a lista fitness_scores como indicado no código
+Selecionar sua nova população e salvar na variável population, como indicado no código.
+
+O seu código deve ser elaborado no jupyter notebook utilizando o google collaboratory : Lab-IA-02.ipynb
+
+Dicas:
+Leia os comentários do código, neles existem dicas de como realizar a implementação.
